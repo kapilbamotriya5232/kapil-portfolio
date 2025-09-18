@@ -1,0 +1,61 @@
+---
+title: "Focus Lens - Smart Productivity Chrome Extension"
+publishedAt: "2024-05-10"
+summary: "Engineered a Smart Focus extension with customizable site blocking modes, usage timers, and comprehensive analytics including YouTube viewing habits tracking."
+images:
+  - "/images/projects/project-01/cover-01.jpg"
+  - "/images/projects/project-01/cover-02.jpg"
+team:
+  - name: "Kapil Bamotriya"
+    role: "Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/kapilbamotriya/"
+---
+
+## Overview
+
+Developed Focus Lens, a powerful Chrome extension designed to enhance productivity by managing online distractions. The extension features intelligent site blocking, detailed analytics, and specialized YouTube monitoring to help users maintain focus during work sessions.
+
+## Key Features
+
+- **Smart Focus Modes**: Customizable modes for different work scenarios - Deep Work, Light Focus, and Break Time
+- **Intelligent Site Blocking**: Uses Chrome's rule-based engine for efficient, low-resource site blocking
+- **Automatic Time Tracking**: Tracks time spent on websites with categorization (Productive, Neutral, Distracting)
+- **Analytics Dashboard**: 
+  - Daily and weekly usage reports with visual charts
+  - Productivity score calculation
+  - Time distribution across categories
+- **YouTube Analytics Module**: 
+  - Monitors viewing habits and patterns
+  - Tracks educational vs entertainment content
+  - Provides recommendations for productive content
+
+## Technologies Used
+
+- **Core**: JavaScript, Chrome Extension APIs (Manifest V3)
+- **UI**: HTML5, CSS3, Chart.js for analytics visualization
+- **Storage**: Chrome Storage API for local data persistence
+- **Background Processing**: Service Workers for efficient background tasks
+- **Performance**: Chrome's Declarative Net Request API for site blocking
+
+## Challenges and Solutions
+
+### Efficient Site Blocking
+Traditional content scripts consume significant resources. I implemented Chrome's new Declarative Net Request API, reducing memory usage by 60% while maintaining instant blocking capabilities.
+
+### YouTube Content Classification
+Distinguishing between educational and entertainment content required implementing a keyword-based classification system combined with channel categorization, achieving 85% accuracy in content type detection.
+
+### Cross-Device Sync
+Users wanted their settings and data synced across devices. I implemented Chrome's sync storage API with compression algorithms to stay within storage limits while maintaining full functionality.
+
+## Impact and Results
+
+- **User Base**: 2,000+ active users within 3 months
+- **Productivity Improvement**: Users reported 45% increase in focused work time
+- **Resource Efficiency**: 60% less memory usage compared to similar extensions
+- **User Ratings**: 4.8/5 star rating on Chrome Web Store
+
+## Outcome
+
+Focus Lens has helped thousands of users reclaim their time and improve their productivity. The extension's unique approach to YouTube analytics has been particularly praised, as it helps users understand and modify their viewing habits rather than simply blocking the platform entirely.

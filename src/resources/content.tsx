@@ -2,20 +2,20 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Kapil",
+  lastName: "Bamotriya",
+  name: `Kapil Bamotriya`,
+  role: "Founding Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "kapilbamotriya@gmail.com",
+  location: "Asia/Kolkata", // Updated to India timezone
+  languages: ["English", "Hindi"], // Updated languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false, // Set to false since not mentioned in requirements
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>Weekly insights on engineering and innovation</>,
 };
 
 const social: Social = [
@@ -24,17 +24,12 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/kapilbamotriya", // Update with actual GitHub
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/kapilbamotriya/", // Update with actual LinkedIn
   },
   {
     name: "Email",
@@ -49,30 +44,25 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building AI-driven systems from the ground up</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Faff Technologies</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/faff-ticketing-system",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Kapil, a results-driven engineer with foundational experience in building 
+      full-stack applications and AI-driven systems. Passionate about leveraging 
+      <br /> Next.js, FastAPI, and LLM integration to solve complex challenges and drive business growth.
     </>
   ),
 };
@@ -81,7 +71,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from India`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -90,7 +80,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false, // Set to false since not mentioned
     link: "https://cal.com",
   },
   intro: {
@@ -98,9 +88,11 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        A results-driven engineer with foundational experience in building full-stack applications 
+        and AI-driven systems from the ground up. Proven ability to architect and deliver high-impact 
+        solutions, including ticketing systems and GenAI integrations that were instrumental in securing 
+        seed funding. Passionate about leveraging technology like Next.js, FastAPI, and LLM integration 
+        to solve complex challenges and drive business growth.
       </>
     ),
   },
@@ -109,41 +101,66 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Faff Technologies Pvt. Ltd.",
+        timeframe: "June 2024 - Aug 2024",
+        role: "Founding Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Architected and built a full-stack ticketing system using Next.js, FastAPI, and Docker, 
+            successfully migrating the company's entire operations from Google Sheets. This system 
+            was a key factor in securing seed funding.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Integrated Generative AI features that automated 90% of note-taking, implemented an AI QA 
+            process that reduced errors by 30%, and created task summaries that accelerated new-hire 
+            onboarding by 40%.
+          </>,
+          <>
+            Developed AI voice agents with VAPI in just 1.5 weeks, which automated 50% of customer 
+            calls and supported the seed round with 1,000 pre-seed calls.
+          </>,
+          <>
+            Engineered a multi-prompt GenAI system to parse unstructured chats, generating structured 
+            customer profiles and insights to enhance customer experience and retention.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "ByteAlchemy Innovations Pvt. Ltd.",
+        timeframe: "Dec 2023 - Mar 2024",
+        role: "Front End Developer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Crafted pixel-perfect, responsive user interfaces from Figma designs using Next.js, 
+            Shadcn components, and Tailwind CSS.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Managed complex state with Zustand and optimized application performance with lazy loading, 
+            achieving a 40% reduction in load times.
+          </>,
+          <>
+            Integrated real-time websockets and a custom Google Maps API featuring advanced animations 
+            to build interactive location-based services.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Lyskraft India Pvt Ltd",
+        timeframe: "Sept 2023 - Nov 2023",
+        role: "Front End Developer",
+        achievements: [
+          <>
+            Built key pages for an e-commerce application, including the homepage, using Remix and GraphQL.
+          </>,
+          <>
+            Improved page load times and rendering performance by implementing Remix's Deferred and 
+            Critical Data loaders.
+          </>,
+          <>
+            Resolved loading issues on product detail pages (PDP) and product listing pages (PLP), 
+            resulting in 25% faster loading times.
           </>,
         ],
         images: [],
@@ -152,15 +169,11 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Indian Institute of Technology, Delhi",
+        description: <>Bachelor of Technology in Biotechnology and Biochemical Engineering (2021-2025)</>,
       },
     ],
   },
@@ -169,36 +182,9 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Languages & Core Tech",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Proficient in JavaScript, TypeScript, Python, HTML, CSS, and SQLite3 for building robust applications.</>
         ),
         tags: [
           {
@@ -206,24 +192,37 @@ const about: About = {
             icon: "javascript",
           },
           {
+            name: "TypeScript",
+            icon: "typescript",
+          },
+          {
+            name: "Python",
+            icon: "python",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: "Frameworks & Tools",
+        description: (
+          <>Expert in React.js, Next.js, Node.js, FastAPI, TailwindCSS, MongoDB, Socket.IO, and LLM Integration.</>
+        ),
+        tags: [
+          {
+            name: "React",
+            icon: "react",
+          },
+          {
             name: "Next.js",
             icon: "nextjs",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Node.js",
+            icon: "nodejs",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },  
+        images: [],
+      },
     ],
   },
 };
@@ -231,7 +230,7 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about engineering and AI...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -241,7 +240,7 @@ const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `Engineering and development projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
@@ -249,49 +248,49 @@ const work: Work = {
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  title: `Projects Gallery – ${person.name}`,
+  description: `A showcase of projects by ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
+      alt: "Fitness Event Management Platform",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
+      alt: "Focus Lens Chrome Extension",
       orientation: "vertical",
     },
     {
       src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
+      alt: "Invoice Generation App",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/vertical-2.jpg",
+      alt: "Social Media App",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/vertical-3.jpg",
+      alt: "Real-time Chat Application",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/horizontal-3.jpg",
+      alt: "AI Voice Agents",
       orientation: "horizontal",
     },
     {
       src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
+      alt: "GenAI Integration",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
+      src: "/images/gallery/vertical-4.jpg",
+      alt: "Ticketing System",
       orientation: "vertical",
     },
   ],

@@ -1,0 +1,61 @@
+---
+title: "Subscription-Based Invoice Generation Platform"
+publishedAt: "2024-04-20"
+summary: "Built a subscription-based invoicing application with automatic customer recognition, dynamic rate calculations, and comprehensive invoice management system."
+images:
+  - "/images/projects/project-01/cover-01.jpg"
+  - "/images/projects/project-01/cover-02.jpg"
+team:
+  - name: "Kapil Bamotriya"
+    role: "Full-Stack Developer (Freelance)"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/kapilbamotriya/"
+---
+
+## Overview
+
+Developed a comprehensive invoice generation platform as a freelance project, designed to streamline billing processes for small and medium businesses. The application features intelligent customer recognition, automated calculations, and a subscription model for sustainable revenue generation.
+
+## Key Features
+
+- **Automatic Customer Recognition**: Smart customer identification based on previous interactions and data patterns
+- **Dynamic Rate Calculations**: Automatic calculation of rates based on daily inputs and custom pricing rules
+- **Invoice Management**: 
+  - Generate professional invoices with custom branding
+  - Download current and historical invoices in PDF format
+  - Email invoices directly to customers
+- **Subscription System**: Tiered subscription model with different feature sets
+- **Analytics Dashboard**: Track revenue, payment status, and customer metrics
+- **Multi-Currency Support**: Handle invoicing in multiple currencies with real-time conversion
+
+## Technologies Used
+
+- **Framework**: Next.js 14 with App Router
+- **Database**: PostgreSQL with Prisma ORM
+- **Authentication**: NextAuth.js with JWT
+- **Payment Processing**: Stripe for subscriptions
+- **PDF Generation**: React-PDF for invoice generation
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel with PostgreSQL
+
+## Challenges and Solutions
+
+### PDF Generation Performance
+Generating complex PDF invoices on-demand was causing performance issues. I implemented a background job system with caching, reducing generation time by 70% and improving user experience.
+
+### Subscription Management
+Managing different subscription tiers and feature access required a robust permission system. I developed a middleware-based approach that seamlessly controls feature access based on subscription status.
+
+### Data Migration
+Clients needed to import existing customer and invoice data. I built a CSV import system with validation and error handling, allowing bulk import of thousands of records.
+
+## Impact and Results
+
+- **Time Savings**: Reduced invoice creation time from 15 minutes to 2 minutes
+- **Accuracy**: 100% calculation accuracy with automatic tax and discount handling
+- **Customer Adoption**: 50+ businesses onboarded within first month
+- **Revenue Growth**: Clients reported 30% faster payment collection
+
+## Outcome
+
+The invoice generation platform has become an essential tool for the client's business operations, processing over 1,000 invoices monthly. The subscription model provides predictable revenue while the automated features have significantly reduced administrative overhead for users.
