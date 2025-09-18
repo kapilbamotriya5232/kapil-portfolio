@@ -40,6 +40,11 @@ export default function About() {
       items: about.work.experiences.map((experience) => experience.company),
     },
     {
+      title: about.projects?.title || "Projects",
+      display: about.projects?.display || false,
+      items: about.projects?.items.map((project) => project.name) || [],
+    },
+    {
       title: about.studies.title,
       display: about.studies.display,
       items: about.studies.institutions.map((institution) => institution.name),
@@ -209,16 +214,35 @@ export default function About() {
                 {about.work.experiences.map((experience, index) => (
                   <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
                     <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
-                      <Text id={experience.company} variant="heading-strong-l">
-                        {experience.company}
-                      </Text>
+                      {experience.link ? (
+                        <a
+                          href={experience.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '4px' }}
+                        >
+                          <Text id={experience.company} variant="heading-strong-l">
+                            {experience.company}
+                          </Text>
+                          <Icon name="arrowUpRight" size="s" onBackground="brand-weak" />
+                        </a>
+                      ) : (
+                        <Text id={experience.company} variant="heading-strong-l">
+                          {experience.company}
+                        </Text>
+                      )}
                       <Text variant="heading-default-xs" onBackground="neutral-weak">
                         {experience.timeframe}
                       </Text>
                     </Row>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
+                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom={experience.description ? "8" : "m"}>
                       {experience.role}
                     </Text>
+                    {experience.description && (
+                      <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="m" style={{ fontStyle: 'italic' }}>
+                        {experience.description}
+                      </Text>
+                    )}
                     <Column as="ul" gap="16">
                       {experience.achievements.map(
                         (achievement: React.ReactNode, index: number) => (
@@ -237,6 +261,72 @@ export default function About() {
                         {experience.images.map((image, index) => (
                           <Row
                             key={index}
+                            border="neutral-medium"
+                            radius="m"
+                            minWidth={image.width}
+                            height={image.height}
+                          >
+                            <Media
+                              enlarge
+                              radius="m"
+                              sizes={image.width.toString()}
+                              alt={image.alt}
+                              src={image.src}
+                            />
+                          </Row>
+                        ))}
+                      </Row>
+                    )}
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {about.projects && about.projects.display && (
+            <>
+              <Heading as="h2" id={about.projects.title} variant="display-strong-s" marginBottom="m">
+                {about.projects.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.projects.items.map((project, index) => (
+                  <Column key={`${project.name}-${project.role}-${index}`} fillWidth>
+                    <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
+                      <Text id={project.name} variant="heading-strong-l">
+                        {project.name}
+                      </Text>
+                      {project.timeframe && (
+                        <Text variant="heading-default-xs" onBackground="neutral-weak">
+                          {project.timeframe}
+                        </Text>
+                      )}
+                    </Row>
+                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom={project.description ? "8" : "m"}>
+                      {project.role}
+                    </Text>
+                    {project.description && (
+                      <Text variant="body-default-s" onBackground="neutral-weak" marginBottom="m" style={{ fontStyle: 'italic' }}>
+                        {project.description}
+                      </Text>
+                    )}
+                    <Column as="ul" gap="16">
+                      {project.achievements.map(
+                        (achievement: React.ReactNode, achIndex: number) => (
+                          <Text
+                            as="li"
+                            variant="body-default-m"
+                            key={`${project.name}-${achIndex}`}
+                          >
+                            {achievement}
+                          </Text>
+                        ),
+                      )}
+                    </Column>
+                    {project.images && project.images.length > 0 && (
+                      <Row fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
+                        {project.images.map((image, imgIndex) => (
+                          <Row
+                            key={imgIndex}
                             border="neutral-medium"
                             radius="m"
                             minWidth={image.width}

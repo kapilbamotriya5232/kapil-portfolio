@@ -144,13 +144,48 @@ export interface About extends BasePageConfig {
     experiences: Array<{
       /** Company name */
       company: string;
+      /** Optional link to company website */
+      link?: string;
       /** Timeframe of employment */
       timeframe: string;
       /** Role or job title */
       role: string;
+      /** Optional description (appears in italics) */
+      description?: string;
       /** Achievements at the company */
       achievements: React.ReactNode[];
       /** Images related to the experience */
+      images?: Array<{
+        /** Image source path */
+        src: string;
+        /** Image alt text */
+        alt: string;
+        /** Image width ratio */
+        width: number;
+        /** Image height ratio */
+        height: number;
+      }>;
+    }>;
+  };
+  /** Projects section */
+  projects?: {
+    /** Whether to display projects section */
+    display: boolean;
+    /** Title for the projects section */
+    title: string;
+    /** List of projects */
+    items: Array<{
+      /** Project name */
+      name: string;
+      /** Project timeframe */
+      timeframe?: string;
+      /** Role in the project */
+      role: string;
+      /** Optional description (appears in italics) */
+      description?: string;
+      /** Project achievements/details */
+      achievements: React.ReactNode[];
+      /** Images related to the project */
       images?: Array<{
         /** Image source path */
         src: string;

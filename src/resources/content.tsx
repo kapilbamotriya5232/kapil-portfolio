@@ -5,9 +5,9 @@ const person: Person = {
   firstName: "Kapil",
   lastName: "Bamotriya",
   name: `Kapil Bamotriya`,
-  role: "Founding Engineer",
+  role: "Full Stack Engineer",
   avatar: "/images/avatar.jpg",
-  email: "kapilbamotriya@gmail.com",
+  email: "kapilworkspace23@gmail.com",
   location: "Asia/Kolkata", // Updated to India timezone
   languages: ["English", "Hindi"], // Updated languages
 };
@@ -24,12 +24,12 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/kapilbamotriya", // Update with actual GitHub
+    link: "https://github.com/kapilbamotriya123", 
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/kapilbamotriya/", // Update with actual LinkedIn
+    link: "https://www.linkedin.com/in/kapil-bamotriya/", // Update with actual LinkedIn
   },
   {
     name: "Email",
@@ -88,11 +88,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        A results-driven engineer with foundational experience in building full-stack applications 
-        and AI-driven systems from the ground up. Proven ability to architect and deliver high-impact 
-        solutions, including ticketing systems and GenAI integrations that were instrumental in securing 
-        seed funding. Passionate about leveraging technology like Next.js, FastAPI, and LLM integration 
-        to solve complex challenges and drive business growth.
+       I'm a Full Stack Engineer (IIT Delhi '25) who believes in end-to-end ownership—transforming business problems into fully realized products. In my two years of building, my work has helped shape solutions at Lyskraft, Flibbr, and faff. 
       </>
     ),
   },
@@ -101,70 +97,151 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "Faff Technologies Pvt. Ltd.",
-        timeframe: "June 2024 - Aug 2024",
-        role: "Founding Engineer",
+        company: "Faff",
+        link: "https://www.faffit.com/",
+        timeframe: "June’25 - Aug’25",
+        role: "",
+        description: "I led foundational engineering efforts at faff, delivering critical technical infrastructure with complete ownership in record time.",
         achievements: [
           <>
-            Architected and built a full-stack ticketing system using Next.js, FastAPI, and Docker, 
-            successfully migrating the company's entire operations from Google Sheets. This system 
-            was a key factor in securing seed funding.
+            Architected a full-stack ticketing system (Next.js, FastAPI, Docker), migrating all operations from Sheets.
           </>,
           <>
-            Integrated Generative AI features that automated 90% of note-taking, implemented an AI QA 
-            process that reduced errors by 30%, and created task summaries that accelerated new-hire 
-            onboarding by 40%.
+            Integrated Generative AI to automate note-taking (90% efficiency gain), improve QA (30% fewer errors), and create task summaries for 40% faster onboarding.
           </>,
           <>
-            Developed AI voice agents with VAPI in just 1.5 weeks, which automated 50% of customer 
-            calls and supported the seed round with 1,000 pre-seed calls.
+            Rapidly developed and deployed AI-powered voice agents using VAPI in just one and a half weeks, automating over 50% of inbound calls, handling ~2500 calls.
           </>,
           <>
-            Engineered a multi-prompt GenAI system to parse unstructured chats, generating structured 
-            customer profiles and insights to enhance customer experience and retention.
+            Developed a multi-prompt GenAI system to parse unstructured chats, generating customer profiles and actionable insights to enhance customer experience and retention.
+          </>,
+          <>
+            Created an LLM-based task categorizer with 87% accuracy across 150+ categories (95% on core tasks) by leveraging embeddings from a dataset of 5,000 tasks.
+          </>,
+          <>
+            Analyzed over 25 metrics to drive KPI improvements, boosting on-time ETAs from 45% to 70%, and created automated investor reports that saved two manual workdays per week.
           </>,
         ],
         images: [],
       },
       {
-        company: "ByteAlchemy Innovations Pvt. Ltd.",
-        timeframe: "Dec 2023 - Mar 2024",
-        role: "Front End Developer",
+        company: "Flibbr",
+        link: "https://beta.flibbr.ai/",
+        timeframe: "Dec’24 - Mar’25",
+        role: "Full Stack Developer",
+        description: "As a founding team member, I built beyond a minimal viable product, developing robust features with complete ownership of projects.",
         achievements: [
           <>
-            Crafted pixel-perfect, responsive user interfaces from Figma designs using Next.js, 
-            Shadcn components, and Tailwind CSS.
+            Translated high-fidelity Figma designs into pixel-perfect, responsive user interfaces for landing pages and user flows, utilizing Next.js, Shadcn components, and Tailwind CSS.
           </>,
           <>
-            Managed complex state with Zustand and optimized application performance with lazy loading, 
-            achieving a 40% reduction in load times.
+            Managed complex application state efficiently using Zustand and significantly optimized front-end performance by implementing lazy loading techniques, which resulted in a 40% reduction in initial load times.
           </>,
           <>
-            Integrated real-time websockets and a custom Google Maps API featuring advanced animations 
-            to build interactive location-based services.
+            Integrated real-time communication features using WebSockets and developed a custom Google Maps API implementation with advanced animations to create highly interactive and engaging location-based services.
+          </>,
+          <>
+            Constructed secure and robust authentication flows and developed comprehensive user dashboards, while also implementing GA4 and Hotjar for detailed conversion tracking and user behavior analysis.
           </>,
         ],
         images: [],
       },
       {
         company: "Lyskraft India Pvt Ltd",
-        timeframe: "Sept 2023 - Nov 2023",
+        link: "https://lyskraft.com",
+        timeframe: "Sept’24 - Nov’24",
         role: "Front End Developer",
+        description: "In my first corporate role, I contributed as a frontend engineer, working closely with the product team to deliver precise UI implementations with excellent performance.",
         achievements: [
           <>
-            Built key pages for an e-commerce application, including the homepage, using Remix and GraphQL.
+            Developed several key pages for a large-scale e-commerce application, including the homepage and a dynamic multimedia component, using Remix and GraphQL to fetch and display data.
           </>,
           <>
-            Improved page load times and rendering performance by implementing Remix's Deferred and 
-            Critical Data loaders.
+            Significantly improved page load times and rendering performance by strategically implementing Remix's Deferred and Critical Data loaders, ensuring a faster and smoother user experience.
           </>,
           <>
-            Resolved loading issues on product detail pages (PDP) and product listing pages (PLP), 
-            resulting in 25% faster loading times.
+            Resolved critical loading issues on Product Detail Pages (PDP) and Product Listing Pages (PLP), integrated a new in-store availability feature, and implemented interactive animations, leading to a 25% improvement in loading speeds.
           </>,
         ],
         images: [],
       },
+    ],
+  },
+  projects: {
+    display: true, // set to false to hide this section
+    title: "Projects",
+    items: [
+      {
+        name: "AI-Powered Ticketing System",
+        timeframe: "2024",
+        role: "Full Stack Developer",
+        description: "Enterprise ticketing system with integrated AI capabilities for automated workflows", // Optional italic description
+        achievements: [
+          <>
+            Built with Next.js, FastAPI, and Docker, featuring real-time updates and automated ticket routing
+          </>,
+          <>
+            Integrated LLM-based features for intelligent ticket classification and response generation
+          </>,
+          <>
+            Implemented comprehensive analytics dashboard with data visualization using Chart.js
+          </>,
+        ],
+        images: [],
+      },
+      {
+        name: "Focus Lens Chrome Extension",
+        timeframe: "2023",
+        role: "Developer",
+        description: "Productivity extension to help users maintain focus during web browsing", // Optional italic description
+        achievements: [
+          <>
+            Developed using Chrome Extension APIs with React for the popup interface
+          </>,
+          <>
+            Implemented website blocking, time tracking, and productivity analytics features
+          </>,
+          <>
+            Achieved 500+ active users within the first month of launch
+          </>,
+        ],
+        images: [],
+      },
+      {
+        name: "Fitness Event Management Platform",
+        timeframe: "2023",
+        role: "Full Stack Developer",
+        description: "Comprehensive platform for organizing and managing fitness events", // Optional italic description
+        achievements: [
+          <>
+            Created event registration system with payment gateway integration using Stripe
+          </>,
+          <>
+            Built real-time participant tracking and leaderboard features using WebSocket
+          </>,
+          <>
+            Developed mobile-responsive interface with offline capability using PWA technologies
+          </>,
+        ],
+        images: [],
+      },
+      // {
+      //   name: "Real-time Chat Application",
+      //   timeframe: "2023",
+      //   role: "Backend Developer",
+      //   achievements: [
+      //     <>
+      //       Architected scalable chat system using Node.js and Socket.IO for real-time communication
+      //     </>,
+      //     <>
+      //       Implemented end-to-end encryption for secure messaging and file sharing
+      //     </>,
+      //     <>
+      //       Designed MongoDB schema for efficient message storage and retrieval with pagination
+      //     </>,
+      //   ],
+      //   images: [],
+      // },
     ],
   },
   studies: {
@@ -173,7 +250,7 @@ const about: About = {
     institutions: [
       {
         name: "Indian Institute of Technology, Delhi",
-        description: <>Bachelor of Technology in Biotechnology and Biochemical Engineering (2021-2025)</>,
+        description: <>Bachelor of Technology in Biotechnology and Biochemical Engineering (2021-2025*)</>,
       },
     ],
   },
@@ -259,19 +336,9 @@ const gallery: Gallery = {
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "Focus Lens Chrome Extension",
-      orientation: "vertical",
-    },
-    {
       src: "/images/gallery/horizontal-2.jpg",
       alt: "Invoice Generation App",
       orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "Social Media App",
-      orientation: "vertical",
     },
     {
       src: "/images/gallery/vertical-3.jpg",
@@ -279,17 +346,12 @@ const gallery: Gallery = {
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "AI Voice Agents",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "GenAI Integration",
-      orientation: "horizontal",
-    },
-    {
       src: "/images/gallery/vertical-4.jpg",
+      alt: "Ticketing System",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/vertical-5.jpg",
       alt: "Ticketing System",
       orientation: "vertical",
     },
