@@ -15,6 +15,7 @@ import {
 import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
+import { ResumeButton } from "@/components/ResumeButton";
 import React from "react";
 
 export async function generateMetadata() {
@@ -200,40 +201,7 @@ export default function Home() {
                     ),
                 )}
                 {/* Download Resume Button */}
-                <React.Fragment>
-                  <Row s={{ hide: true }}>
-                    <Button
-                      href="/resume/Kapil_Bamotriya_resume.pdf"
-                      download="Kapil_Bamotriya_Resume.pdf"
-                      size="s"
-                      weight="default"
-                      variant="secondary"
-                    >
-                      <Row gap="8" vertical="center">
-                        <img 
-                          src="/images/download_icon/image.png" 
-                          alt="Download" 
-                          style={{ width: '16px', height: '16px' }}
-                        />
-                        Résumé
-                      </Row>
-                    </Button>
-                  </Row>
-                  <Row hide s={{ hide: false }}>
-                    <IconButton
-                      href="/resume/Kapil_Bamotriya_resume.pdf"
-                      download="Kapil_Bamotriya_Resume.pdf"
-                      size="l"
-                      variant="secondary"
-                    >
-                      <img 
-                        src="/images/download_icon/image.png" 
-                        alt="Download" 
-                        style={{ width: '20px', height: '20px' }}
-                      />
-                    </IconButton>
-                  </Row>
-                </React.Fragment>
+                <ResumeButton />
               </Row>
             )}
           </Column>
