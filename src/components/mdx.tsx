@@ -1,10 +1,10 @@
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
 import React, { ReactNode } from "react";
 import { slugify as transliterate } from "transliteration";
+import { Gallery } from "./Gallery";
 
 import {
   Heading,
-  HeadingLink,
   Text,
   InlineCode,
   CodeBlock,
@@ -77,24 +77,51 @@ function createImage({ alt, src, ...props }: MediaProps & { src: string }) {
   );
 }
 
-function slugify(str: string): string {
+function slugify(str: string | any): string {
+  // Handle non-string inputs
+  if (typeof str !== 'string') {
+    if (str === null || str === undefined) return '';
+    str = String(str);
+  }
+  
   const strWithAnd = str.replace(/&/g, " and "); // Replace & with 'and'
-  return transliterate(strWithAnd, {
-    lowercase: true,
-    separator: "-", // Replace spaces with -
-  }).replace(/\-\-+/g, "-"); // Replace multiple - with single -
+  return transliterate(strWithAnd)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/\-\-+/g, "-") // Replace multiple - with single -
+    .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
 }
 
 function createHeading(as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") {
   const CustomHeading = ({
     children,
     ...props
-  }: Omit<React.ComponentProps<typeof HeadingLink>, "as" | "id">) => {
-    const slug = slugify(children as string);
+  }: Omit<React.ComponentProps<typeof Heading>, "as" | "id">) => {
+    // Extract text content from children (handles React nodes, arrays, etc.)
+    const getTextContent = (node: any): string => {
+      if (typeof node === 'string') return node;
+      if (typeof node === 'number') return String(node);
+      if (!node) return '';
+      if (Array.isArray(node)) return node.map(getTextContent).join('');
+      if (node.props && node.props.children) return getTextContent(node.props.children);
+      return '';
+    };
+    
+    const slug = slugify(getTextContent(children));
+    
+    const variantMap = {
+      h1: "display-strong-xs",
+      h2: "heading-strong-xl",
+      h3: "heading-strong-l",
+      h4: "heading-strong-m",
+      h5: "heading-strong-s",
+      h6: "heading-strong-xs",
+    } as const;
+    
     return (
-      <HeadingLink marginTop="24" marginBottom="12" as={as} id={slug} {...props}>
+      <Heading marginTop="24" marginBottom="12" variant={variantMap[as]} as={as} id={slug} {...props}>
         {children}
-      </HeadingLink>
+      </Heading>
     );
   };
 
@@ -202,6 +229,7 @@ const components = {
   Icon,
   Media,
   SmartLink,
+  Gallery,
 };
 
 type CustomMDXProps = MDXRemoteProps & {

@@ -1,0 +1,65 @@
+---
+title: "Fiddle Fitness: WhatsApp-Powered Class Booking System"
+publishedAt: ""
+summary: "Built an end-to-end automated platform for Fiddle Fitness to run their online fitness business entirely through WhatsApp, handling 250+ registrations and 100+ new customers."
+images:
+  - "/images/projects/fiddlefitness/cover.jpg"
+  - "/images/projects/fiddlefitness/screenshot-1.jpg"
+  - "/images/projects/fiddlefitness/screenshot-2.jpg"
+team:
+  - name: "Kapil Bamotriya"
+    role: "Full-Stack Developer (Freelance)"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/kapilbamotriya/"
+---
+
+<Row horizontal="center" marginBottom="32">
+  <Button 
+    href="https://api.whatsapp.com/send?phone=917013820882&text=Hey%2C%20I%20am%20excited%20to%20join%20Fiddle%20Fitness"
+    variant="secondary"
+    size="m"
+    prefixIcon="message"
+  >
+    Try Fiddle Fitness
+  </Button>
+</Row>
+
+I built an end-to-end, fully automated platform for Fiddle Fitness to run their online fitness business entirely through WhatsApp. The system handles the complete user journey—from discovery and payment to class reminders and feedback—creating a seamless experience for customers and a powerful management tool for the business.
+
+### **The Automated User Journey on WhatsApp**
+
+The entire customer interaction is handled by a chatbot I developed, following this flow:
+
+1. **Seamless Onboarding:** A new user starts a chat and registers their details through an interactive WhatsApp form.
+2. **Event Discovery:** Users can browse fitness categories (e.g., Zumba, Yoga) and view upcoming events directly in the chat.
+3. **Instant Registration & Payment:** After selecting an event, the user is sent a Razorpay link to complete the payment.
+4. **Automated Confirmations:** Upon successful payment, the user instantly receives a confirmation message and an invoice via email.
+5. **Smart Reminders:** The system automatically sends event reminders and the unique Zoom meeting link to registered attendees before the class starts.
+6. **Feedback Loop:** After the session, a message is sent to collect user ratings and feedback.
+7. **Referral & Rewards System:** Users receive a unique referral code. For every successful referral, they earn "Fiddle Coins" which can be used for discounts on future events.
+
+### **The Admin Dashboard**
+
+To power the WhatsApp experience, I built a comprehensive web-based dashboard for the Fiddle Fitness team to manage their entire operation.
+
+- **Event Management:** Create, update, and manage all fitness events and schedules.
+- **Customer & Trainer Database:** A centralized place to view all customer data, registration history, and manage trainer profiles.
+- **Financial Tracking:** Monitor payments, track revenue, and view detailed analytics on event performance.
+
+### The platform immediately proved its value by flawlessly powering **~10 live events**. The robust, end-to-end automation managed **over 250 registrations** and onboarded **100+ new customers** without any technical issues, directly enabling the client to scale their new online business operations from day one.
+
+### **Project Gallery**
+
+<Gallery 
+  images={[
+    { src: "/images/projects/fiddlefitness/ss1.jpg", alt: "WhatsApp registration form interface" },
+    { src: "/images/projects/fiddlefitness/ss2.jpg", alt: "Admin dashboard overview" },
+    { src: "/images/projects/fiddlefitness/ss3.jpg", alt: "Event management panel" },
+    { src: "/images/projects/fiddlefitness/ss4.jpg", alt: "Customer database view" },
+    { src: "/images/projects/fiddlefitness/ss5.jpg", alt: "Payment tracking interface" },
+    { src: "/images/projects/fiddlefitness/ss6.jpg", alt: "WhatsApp conversation flow" },
+    { src: "/images/projects/fiddlefitness/ss7.jpg", alt: "Analytics and reporting dashboard" },
+    { src: "/images/projects/fiddlefitness/ss8.jpg", alt: "Trainer profile management" },
+    { src: "/images/projects/fiddlefitness/ss9.jpg", alt: "Feedback collection interface" }
+  ]}
+/>

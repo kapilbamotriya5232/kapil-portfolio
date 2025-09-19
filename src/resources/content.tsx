@@ -101,10 +101,10 @@ const about: About = {
         link: "https://www.faffit.com/",
         timeframe: "June’25 - Aug’25",
         role: "",
-        description: "I led foundational engineering efforts at faff, delivering critical technical infrastructure with complete ownership in record time.",
+        description: "Founding engineer at Faff, owned and delivered core infrastructure that was pivotal in securing seed round from Nexus Partners",
         achievements: [
           <>
-            Architected a full-stack ticketing system (Next.js, FastAPI, Docker), migrating all operations from Sheets.
+            Architected a Robust full-stack ticketing system (Next.js, FastAPI, socketIO, Docker), migrating all operations from Sheets.
           </>,
           <>
             Integrated Generative AI to automate note-taking (90% efficiency gain), improve QA (30% fewer errors), and create task summaries for 40% faster onboarding.
@@ -171,47 +171,30 @@ const about: About = {
     display: true, // set to false to hide this section
     title: "Projects",
     items: [
-      {
-        name: "AI-Powered Ticketing System",
-        timeframe: "2024",
-        role: "Full Stack Developer",
-        description: "Enterprise ticketing system with integrated AI capabilities for automated workflows", // Optional italic description
-        achievements: [
-          <>
-            Built with Next.js, FastAPI, and Docker, featuring real-time updates and automated ticket routing
-          </>,
-          <>
-            Integrated LLM-based features for intelligent ticket classification and response generation
-          </>,
-          <>
-            Implemented comprehensive analytics dashboard with data visualization using Chart.js
-          </>,
-        ],
-        images: [],
-      },
-      {
-        name: "Focus Lens Chrome Extension",
-        timeframe: "2023",
-        role: "Developer",
-        description: "Productivity extension to help users maintain focus during web browsing", // Optional italic description
-        achievements: [
-          <>
-            Developed using Chrome Extension APIs with React for the popup interface
-          </>,
-          <>
-            Implemented website blocking, time tracking, and productivity analytics features
-          </>,
-          <>
-            Achieved 500+ active users within the first month of launch
-          </>,
-        ],
-        images: [],
-      },
+      // {
+      //   name: "AI-Powered Ticketing System",
+      //   timeframe: "2024",
+      //   role: "Full Stack Developer",
+      //   description: "Enterprise ticketing system with integrated AI capabilities for automated workflows", // Optional italic description
+      //   achievements: [
+      //     <>
+      //       Built with Next.js, FastAPI, and Docker, featuring real-time updates and automated ticket routing
+      //     </>,
+      //     <>
+      //       Integrated LLM-based features for intelligent ticket classification and response generation
+      //     </>,
+      //     <>
+      //       Implemented comprehensive analytics dashboard with data visualization using Chart.js
+      //     </>,
+      //   ],
+      //   images: [],
+      // },
       {
         name: "Fitness Event Management Platform",
         timeframe: "2023",
         role: "Full Stack Developer",
         description: "Comprehensive platform for organizing and managing fitness events", // Optional italic description
+        link: "/work/fiddlefitness",
         achievements: [
           <>
             Created event registration system with payment gateway integration using Stripe
@@ -225,6 +208,42 @@ const about: About = {
         ],
         images: [],
       },
+      {
+        name: "Smart Focus Chrome Extension",
+        timeframe: "2023",
+        role: "Developer",
+        description: "Productivity extension to help users maintain focus during web browsing", // Optional italic description
+        link: "/work/smart-focus",
+        achievements: [
+          <>
+            Developed using Chrome Extension APIs with React for the popup interface
+          </>,
+          <>
+            Implemented website blocking, time tracking, and productivity analytics features
+          </>,
+          <>
+            Achieved 500+ active users within the first month of launch
+          </>,
+        ],
+        images: [],
+      },
+      
+      {
+        name: "Social Media Platform",
+        timeframe: "2023",
+        role: "",
+        description: "developed a full-stack social media application from the ground up.",
+        link: "/work/social-media-platform",
+        achievements: [
+          <>
+            • Built a social platform with Next, Lucia, and Prisma, enabling accounts, likes, comments, and real-time notifications
+          </>,
+          <>
+            • Engineered a media system with Uploadthing for photo/video uploads, integrated PostgreSQL & added dark mode.
+          </>,
+        ],
+        images: [],
+      }
       // {
       //   name: "Real-time Chat Application",
       //   timeframe: "2023",

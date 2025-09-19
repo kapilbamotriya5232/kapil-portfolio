@@ -18,6 +18,7 @@ import {
 import { baseURL, about, person, work } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
 import { ScrollToHash, CustomMDX } from "@/components";
+import { ImageSlider } from "@/components/ImageSlider";
 import { Metadata } from "next";
 import { Projects } from "@/components/work/Projects";
 
@@ -118,19 +119,28 @@ export default async function Project({
           </Text>
         </Row>
       </Row>
-      {post.metadata.images.length > 0 && (
-        <Media priority aspectRatio="16 / 9" radius="m" alt="image" src={post.metadata.images[0]} />
-      )}
+      {/* {post.metadata.images.length > 0 && (
+        <>
+          <Media priority aspectRatio="16 / 9" radius="m" alt="Cover image" src={post.metadata.images[0]} />
+          {post.metadata.images.length > 1 && (
+            <ImageSlider 
+              images={post.metadata.images.slice(1)}
+              showIndicators={true}
+              showArrows={true}
+            />
+          )}
+        </>
+      )} */}
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
         <CustomMDX source={post.content} />
       </Column>
-      <Column fillWidth gap="40" horizontal="center" marginTop="40">
+      {/* <Column fillWidth gap="40" horizontal="center" marginTop="40">
         <Line maxWidth="40" />
         <Heading as="h2" variant="heading-strong-xl" marginBottom="24">
           Related projects
         </Heading>
         <Projects exclude={[post.slug]} range={[2]} />
-      </Column>
+      </Column> */}
       <ScrollToHash />
     </Column>
   );

@@ -183,6 +183,8 @@ export interface About extends BasePageConfig {
       role: string;
       /** Optional description (appears in italics) */
       description?: string;
+      /** Optional link to project details page */
+      link?: string;
       /** Project achievements/details */
       achievements: React.ReactNode[];
       /** Images related to the project */

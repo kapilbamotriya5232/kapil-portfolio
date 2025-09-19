@@ -19,7 +19,7 @@ const baseURL: string = "https://kapilbamotriya.in/";
 const routes: RoutesConfig = {
   "/": true,
   "/about": false,
-  "/work": false,
+  "/work": true,
   "/blog": true,
   "/gallery": true,
 };

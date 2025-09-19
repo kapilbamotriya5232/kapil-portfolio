@@ -107,7 +107,7 @@ export default function Home() {
               <Icon onBackground="accent-weak" name="globe" />
               {person.location}
             </Row> */}
-            {person.languages && person.languages.length > 0 && (
+            {/* {person.languages && person.languages.length > 0 && (
               <Row wrap gap="8">
                 {person.languages.map((language, index) => (
                   <Tag key={index} size="l">
@@ -115,7 +115,7 @@ export default function Home() {
                   </Tag>
                 ))}
               </Row>
-            )}
+            )} */}
           </Column>
         )}
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
@@ -199,6 +199,41 @@ export default function Home() {
                       </React.Fragment>
                     ),
                 )}
+                {/* Download Resume Button */}
+                <React.Fragment>
+                  <Row s={{ hide: true }}>
+                    <Button
+                      href="/resume/Kapil_Bamotriya_resume.pdf"
+                      download="Kapil_Bamotriya_Resume.pdf"
+                      size="s"
+                      weight="default"
+                      variant="secondary"
+                    >
+                      <Row gap="8" vertical="center">
+                        <img 
+                          src="/images/download_icon/image.png" 
+                          alt="Download" 
+                          style={{ width: '16px', height: '16px' }}
+                        />
+                        Résumé
+                      </Row>
+                    </Button>
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <IconButton
+                      href="/resume/Kapil_Bamotriya_resume.pdf"
+                      download="Kapil_Bamotriya_Resume.pdf"
+                      size="l"
+                      variant="secondary"
+                    >
+                      <img 
+                        src="/images/download_icon/image.png" 
+                        alt="Download" 
+                        style={{ width: '20px', height: '20px' }}
+                      />
+                    </IconButton>
+                  </Row>
+                </React.Fragment>
               </Row>
             )}
           </Column>
@@ -296,9 +331,22 @@ export default function Home() {
                 {about.projects.items.map((project, index) => (
                   <Column key={`${project.name}-${project.role}-${index}`} fillWidth>
                     <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
-                      <Text id={project.name} variant="heading-strong-l">
-                        {project.name}
-                      </Text>
+                      <Row gap="12" vertical="center">
+                        <Text id={project.name} variant="heading-strong-l">
+                          {project.name}
+                        </Text>
+                        {project.link && (
+                          <a
+                            href={project.link}
+                            style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '4px' }}
+                          >
+                            <Text variant="body-default-s" onBackground="brand-weak">
+                              View Details
+                            </Text>
+                            <Icon name="arrowUpRight" size="s" onBackground="brand-weak" />
+                          </a>
+                        )}
+                      </Row>
                       {/* {project.timeframe && (
                         <Text variant="heading-default-xs" onBackground="neutral-weak">
                           {project.timeframe}
