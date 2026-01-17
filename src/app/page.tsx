@@ -239,7 +239,7 @@ export default function Home() {
                         </Text>
                       )}
 
-                      <Text variant="heading-default-xs" style={experience.company === "Mercor" ? {fontWeight:""} : {fontWeight:'inherit'} } onBackground="neutral-weak">
+                      <Text variant="heading-default-xs" style={experience.company === "Mercor" ? { fontWeight: "bold" } : undefined} onBackground="neutral-weak">
                         {experience.timeframe}
                       </Text>
                     </Row>
@@ -247,32 +247,29 @@ export default function Home() {
                     >
                       {experience.role}
                     </Text>
-                    {experience.description 
-                      && experience.company ==="Mercor" 
-                      ? (
-                        <Text variant="body-default-m" onBackground="neutral-weak"  style={{ fontStyle: 'italic', fontWeight: "bold", }}>
-                          {experience.description}
-                        </Text>
-                      )
-                      :(
-                        <Text variant="body-default-s" onBackground="neutral-weak"  style={{ fontStyle: 'italic' }}>
-                          {experience.description}
-                        </Text>
-                      )
-                    }
-                   {experience.achievements.length !== 0 &&    <Column as="ul" gap="16">
-                      {experience.achievements.map(
-                        (achievement: React.ReactNode, index: number) => (
-                          <Text
-                            as="li"
-                            variant="body-default-m"
-                            key={`${experience.company}-${index}`}
-                          >
-                            {achievement}
-                          </Text>
-                        ),
-                      )}
-                    </Column>}
+                    {experience.description && (
+  <Text
+    variant={experience.company === "Mercor" ? "body-default-m" : "body-default-s"}
+    onBackground="neutral-weak"
+    marginBottom="m"
+    style={{
+      fontStyle: "italic",
+      fontWeight: experience.company === "Mercor" ? "bold" : "inherit",
+    }}
+  >
+    {experience.description}
+  </Text>
+)}
+
+{experience.achievements?.length > 0 && (
+  <Column as="ul" gap="16">
+    {experience.achievements.map((achievement: React.ReactNode, idx: number) => (
+      <Text as="li" variant="body-default-m" key={`${experience.company}-${idx}`}>
+        {achievement}
+      </Text>
+    ))}
+  </Column>
+)} ̰
                     {experience.images && experience.images.length > 0 && (
                       <Row fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
                         {experience.images.map((image, index) => (
