@@ -238,19 +238,29 @@ export default function Home() {
                           {experience.company}
                         </Text>
                       )}
-                      <Text variant="heading-default-xs" onBackground="neutral-weak">
+
+                      <Text variant="heading-default-xs" style={experience.company === "Mercor" ? {fontWeight:""} : {fontWeight:'inherit'} } onBackground="neutral-weak">
                         {experience.timeframe}
                       </Text>
                     </Row>
-                    <Text variant="body-default-s" onBackground="brand-weak" marginBottom={experience.description ? "8" : "m"}>
+                    <Text variant="body-default-s" onBackground="brand-weak"   marginBottom={experience.company === "Mercor" ? "4" : experience.description ? "8" : "m"}
+                    >
                       {experience.role}
                     </Text>
-                    {experience.description && (
-                      <Text variant="body-default-s" onBackground="neutral-weak"  style={{ fontStyle: 'italic' }}>
-                        {experience.description}
-                      </Text>
-                    )}
-                    <Column as="ul" gap="16">
+                    {experience.description 
+                      && experience.company ==="Mercor" 
+                      ? (
+                        <Text variant="body-default-m" onBackground="neutral-weak"  style={{ fontStyle: 'italic', fontWeight: "bold", }}>
+                          {experience.description}
+                        </Text>
+                      )
+                      :(
+                        <Text variant="body-default-s" onBackground="neutral-weak"  style={{ fontStyle: 'italic' }}>
+                          {experience.description}
+                        </Text>
+                      )
+                    }
+                   {experience.achievements.length !== 0 &&    <Column as="ul" gap="16">
                       {experience.achievements.map(
                         (achievement: React.ReactNode, index: number) => (
                           <Text
@@ -262,7 +272,7 @@ export default function Home() {
                           </Text>
                         ),
                       )}
-                    </Column>
+                    </Column>}
                     {experience.images && experience.images.length > 0 && (
                       <Row fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
                         {experience.images.map((image, index) => (

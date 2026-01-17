@@ -88,7 +88,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-       I'm a Full Stack Engineer (IIT Delhi '25) who believes in end-to-end ownership—transforming business problems into fully realized products. In my two years of building, my work has helped shape solutions at Lyskraft, Flibbr, and faff. 
+       I'm a Full Stack Engineer (IIT Delhi '25) who believes in end-to-end ownership, transforming business problems into fully realized products. In my two years of building, my work has helped shape solutions at Mercor, Lyskraft, Flibbr, and faff. 
       </>
     ),
   },
@@ -97,11 +97,20 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
+        company: "Mercor",
+        link: "https://mercor.com",
+        timeframe: "Aug’25 - Present",
+        role: "Software Development Engineer - I",
+        description: "Enhancing LLM task grading verifiers for deeper, more reliable evaluations.",
+        achievements:[],
+        images: [],
+      },
+      {
         company: "Faff",
         link: "https://www.faffit.com/",
         timeframe: "June’25 - Aug’25",
-        role: "",
-        description: "Founding engineer at Faff, owned and delivered core infrastructure that was pivotal in securing seed round from Nexus Partners",
+        role: "Founding engineer at Faff",
+        description: "Owned and delivered core infrastructure that was pivotal in securing seed round from Nexus Partners",
         achievements: [
           <>
             Architected a Robust full-stack ticketing system (Next.js, FastAPI, socketIO, Docker), migrating all operations from Sheets.
